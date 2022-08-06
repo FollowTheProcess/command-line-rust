@@ -1,0 +1,15 @@
+[package]
+name = "echor"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Tom Fleet <tomfleet2018@gmail.com>" ]
+description = "Rust echo"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.2.16", features = [ "derive" ] }
+
+[dev-dependencies]
+assert_cmd = "2.0.4"
+predicates = "2.1.1"
