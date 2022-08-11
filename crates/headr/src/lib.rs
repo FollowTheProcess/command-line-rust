@@ -5,7 +5,7 @@ use std::{
     io::{self, BufRead, BufReader, Read},
 };
 
-const LONG_ABOUT: &str = "A cat clon&e written in Rust.";
+const LONG_ABOUT: &str = "A head clone written in Rust.";
 
 /// CLIResult encodes a result of executing the catr CLI
 type CLIResult<T> = Result<T, Box<dyn Error>>;
