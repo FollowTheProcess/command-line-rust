@@ -19,6 +19,7 @@ jobs:
         with:
           components: clippy, rustfmt
           override: true
+          toolchain: stable
 
       - name: Test
         run: cargo test --workspace
@@ -35,6 +36,7 @@ jobs:
         with:
           components: clippy, rustfmt
           override: true
+          toolchain: stable
 
       - name: Clippy
         run: cargo clippy --all-targets --all-features
@@ -51,6 +53,7 @@ jobs:
         with:
           components: clippy, rustfmt
           override: true
+          toolchain: stable
 
       - name: Check Formatting
         run: cargo fmt --all -- --check
