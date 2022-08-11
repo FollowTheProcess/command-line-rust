@@ -1,6 +1,6 @@
 use std::{error::Error, io::BufRead};
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct FileInfo {
     pub lines: usize,
     pub words: usize,

@@ -12,7 +12,7 @@ const LONG_ABOUT: &str = "A head clone written in Rust.";
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = LONG_ABOUT)]
-struct CLI {
+struct Cli {
     /// Input file(s)
     #[clap(value_parser, default_value = "-")]
     files: Vec<String>,
@@ -35,7 +35,7 @@ struct CLI {
 }
 
 pub fn run() -> Result<(), Box<dyn Error>> {
-    let mut cli = CLI::parse();
+    let mut cli = Cli::parse();
 
     if [cli.lines, cli.words, cli.bytes, cli.chars]
         .iter()
