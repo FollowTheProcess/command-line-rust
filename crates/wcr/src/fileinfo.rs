@@ -1,4 +1,4 @@
-use std::{error::Error, io::BufRead};
+use std::io::{self, BufRead};
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct FileInfo {
@@ -8,7 +8,7 @@ pub struct FileInfo {
     pub chars: usize,
 }
 
-pub fn count(mut file: impl BufRead) -> Result<FileInfo, Box<dyn Error>> {
+pub fn count(mut file: impl BufRead) -> Result<FileInfo, io::Error> {
     let mut lines = 0;
     let mut words = 0;
     let mut bytes = 0;

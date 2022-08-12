@@ -90,7 +90,7 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-fn open(filename: &str) -> Result<Box<dyn BufRead>, Box<dyn Error>> {
+fn open(filename: &str) -> Result<Box<dyn BufRead>, io::Error> {
     match filename {
         "-" => Ok(Box::new(BufReader::new(io::stdin()))),
         _ => Ok(Box::new(BufReader::new(File::open(filename)?))),
