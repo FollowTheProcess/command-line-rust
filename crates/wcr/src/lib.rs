@@ -8,7 +8,7 @@ use std::{
 
 mod fileinfo;
 
-const LONG_ABOUT: &str = "A head clone written in Rust.";
+const LONG_ABOUT: &str = "A wc clone written in Rust.";
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = LONG_ABOUT)]
